@@ -1,30 +1,33 @@
-graph TD
-    A[Start] --> B[Update and Install Packages]
-    B --> C[Setup Virtual Environment]
-    C --> D[Install FastAPI and Uvicorn]
-    D --> E[Create FastAPI Application]
-    E --> F[Configure Systemd Service]
-    F --> G[Configure Nginx]
-    G --> H[Setup UFW Firewall]
-    H --> I[Display IP and Log Instructions]
-    I --> J[End]
+# FastAPI Deployment Flowchart
 
-    B --> B1[Python3]
-    B --> B2[pip]
-    B --> B3[Nginx]
-    B --> B4[UFW]
 
-    E --> E1[Create main.py]
-    E --> E2[Define Routes]
+This is a work in progress. DO NOT USE THIS IN REAL PRODUCTION. 
 
-    F --> F1[Create Service File]
-    F --> F2[Enable Service]
-    F --> F3[Start Service]
+This is meant to get up and running asap on a cheap box. 
 
-    G --> G1[Create Nginx Config]
-    G --> G2[Enable Site]
-    G --> G3[Restart Nginx]
 
-    H --> H1[Allow SSH]
-    H --> H2[Allow HTTP]
-    H --> H3[Enable UFW]
+
+1. Start
+2. Update and Install Packages
+   - Python3
+   - pip
+   - Nginx
+   - UFW
+3. Setup Virtual Environment
+4. Install FastAPI and Uvicorn
+5. Create FastAPI Application
+   - Create main.py
+   - Define Routes
+6. Configure Systemd Service
+   - Create Service File
+   - Enable Service
+   - Start Service
+7. Configure Nginx
+   - Create Nginx Config
+   - Enable Site
+   - Restart Nginx
+8. Setup UFW Firewall
+   - Allow SSH
+   - Allow HTTP
+   - Enable UFW
+9. Display IP and Log Instructions
